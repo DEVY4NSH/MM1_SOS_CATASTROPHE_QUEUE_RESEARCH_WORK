@@ -4,24 +4,15 @@ This repository contains the programming part of my research work, used for gene
 
 ## Abstract
 
-- This work studies the **transient** and **steady-state** behavior of an **infinite-buffer**, **single-server** Markovian queueing system with optional service **(SOS)** and **catastrophes**:
+- This study investigates both the transient and steady-state dynamics of an **infinite-buffer**, **single-server** Markovian queueing system that incorporates optional service (SOS) and the occurrence of catastrophes.
 
-- Units arrive following a Poisson process and receive a first essential service (FES).
+- Units enter the system following a **Poisson arrival** process and initially receive a first essential service (FES). After completing FES, each unit has a probabilistic choice to undergo a second optional service (SOS), modeled using a Bernoulli distribution.
 
-- Upon completion of FES, each unit can opt for a second optional service (SOS) with a probability defined by a Bernoulli distribution.
+- The server provides exponentially distributed service times for both **FES** and **SOS**, serving one unit at a time. Catastrophic events also arrive according to a **Poisson process**, potentially removing all units from the system. However, with a **protection mechanism** in place, units may survive **catastrophes** based on a **Bernoulli probability**.
 
-- The single server provides exponential service for both **FES** and **SOS**, serving one unit at a time.
+- The system length distribution is characterized through a **probability-generating function** for both **transient** and **steady states**. Transient probabilities are approximated numerically using the **Runge-Kutta method**, while steady-state probabilities are derived in closed form.
 
-- Catastrophes occur according to a **Poisson process** and may eliminate all units in the system. With a **protection** mechanism, units may survive catastrophes based on a **Bernoulli** probability.
-
-- The probability-generating function for the system length distribution is derived for both transient and steady states.
-
-- Transient-state probabilities are computed numerically using the **Runge-Kutta** method.
-
-- Steady-state solutions are obtained in closed form.
-
-- Finally, **metaheuristic optimization** techniques are applied to maximize the system’s overall profit by tuning system parameters, including the protection parameter.
-
+Finally, several **metaheuristic optimization** techniques are employed to tune system parameters, including the protection mechanism, with the goal of maximizing overall **system performance and profit**.
 ## Repository Contents
 
 - **steady_state_solution.py** – Closed-form steady-state solution script.
