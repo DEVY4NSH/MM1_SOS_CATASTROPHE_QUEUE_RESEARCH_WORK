@@ -1,15 +1,53 @@
 # MM1_SOS_CATASTROPHE_QUEUE_RESEARCH_WORK
-This repository contain the programming part which is used by me in generating numerical results in my research work and overview of my work as a part of my Btech Project and Mtech Thesis. 
+
+This repository contains the programming part of my research work, used for generating numerical results as part of my **B.Tech Project and M.Tech Thesis**. It provides a computational framework for analyzing and optimizing a single-server **Markovian queueing system** with optional service and catastrophes.
+
 ## Abstract
-This work deals with the transient and steady-state analysis of an infinite buffer single server Markovian
-queueing system with optional service and catastrophes. Units enter the system following the Poisson manner
-and receive a compulsory first essential service (FES). Upon completion of F ES, units can opt for a second
-optional service (SOS) with a certain probability following the Bernoulli distribution. The single server offers
-exponential service to one unit at a time for F ES and SOS. Catastrophes enter the busy system according to
-the Poisson distribution, which either eliminates every unit in the system (i.e., in service or in the queue) or;
-due to the system administrator’s security measures, all the units will likely survive according to the Bernoulli
-distribution. The probability-generating function is obtained for the system length distribution for both transient
-and steady states. Then, applying the Runge-Kutta method, the transient-state probabilities are approximated
-numerically, whereas the closed-form expression for the steady-state solution is also obtained. Finally, several
-metaheuristic optimization approaches are employed to optimize the system’s attributes in order to maximize its
-overall profit, which involves protection parameter
+
+This work studies the **transient** and **steady-state** behavior of an **infinite-buffer**, **single-server** Markovian queueing system with optional service **(SOS)** and **catastrophes**:
+
+Units arrive following a Poisson process and receive a first essential service (FES).
+
+Upon completion of FES, each unit can opt for a second optional service (SOS) with a probability defined by a Bernoulli distribution.
+
+The single server provides exponential service for both **FES** and **SOS**, serving one unit at a time.
+
+Catastrophes occur according to a **Poisson process** and may eliminate all units in the system. With a **protection** mechanism, units may survive catastrophes based on a **Bernoulli** probability.
+
+The probability-generating function for the system length distribution is derived for both transient and steady states.
+
+Transient-state probabilities are computed numerically using the **Runge-Kutta** method.
+
+Steady-state solutions are obtained in closed form.
+
+Finally, **metaheuristic optimization** techniques are applied to maximize the system’s overall profit by tuning system parameters, including the protection parameter.
+
+## Repository Contents
+
+**steady_state_solution.py** – Closed-form steady-state solution script.
+
+**transient_runge_kutta_method.py** – Transient-state numerical approximation using Runge-Kutta.
+
+### Optimization algorithms:
+
+**gsa_algorithm.py** – Gravitational Search Algorithm
+
+**pso_algorithm.py** – Particle Swarm Optimization Algorithm
+
+**sca_algorithm.py** – Sine-Cosine Algorithm
+
+**contour_plotting.py** – Scripts for visualizing results.
+
+## Usage
+
+### Clone the repository:
+git clone https://github.com/DEVY4NSH/MM1_SOS_CATASTROPHE_QUEUE_RESEARCH_WORK.git
+
+
+Run the desired scripts to replicate results or generate new simulations.
+
+### Notes
+
+Each script contains inline comments to explain the algorithms and workflow.
+
+Suitable for research, academic projects, and further development in queueing theory and system optimization.
